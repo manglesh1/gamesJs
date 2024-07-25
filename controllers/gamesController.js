@@ -10,6 +10,8 @@ const GamesController = {
   findVariants: async (req, res) => {
     const id = req.params?.id;
 
+    console.log("ID", id);
+
     if (!id) {
       return res.status(400).json(apiResponse(400, "Game ID is required"));
     }
